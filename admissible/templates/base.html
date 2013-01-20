@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="fr" lang="fr">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>
+            {% block title %}{% endblock %}
+    </title>
+<!-- Bootstrap -->
+    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
+ <!-- Design -->
+    {% load compressed %}
+    {% compressed_css 'new_core' %}
+   <script src="http://use.edgefonts.net/yellowtail.js"></script>
+    <script src="http://use.edgefonts.net/abril-fatface.js"></script>
+</head>
+
+<body>
+
+    <div id="menu-global">
+        {% block menu-global %}
+        <ul>
+            <li><a href="#inscription">Inscription</a></li>
+            <li><a href="#connexion">Connexion</a></li>
+            <li><a href="/accueil">Les ponts</a></li>
+        </ul><!-- #navigation -->
+        {% endblock %}
+    </div>
+
+    <div id="container">
+		
+		<div id="content">
+
+            <div id="menu-sub-space">
+                <div id="menu-sub">
+                    {% block menu-sub %}{% endblock %}
+                </div>
+            </div>
+
+            <div id="content-title">
+                <h1>
+                    {% block content-title %}{% endblock %}
+                </h1>
+            </div>
+
+            <div id="content-view">	
+                {% block content %}{% endblock %}
+            </div>
+
+		</div>
+
+    </div>
+    
+    <div id="footer">
+        {% block footer %}
+        <p>
+            Code et design par NE'013
+        </p>
+        {% endblock %}
+    </div>
+
+<!--
+    <script src="{{ STATIC_URL }}js/jquery.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-alert.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-modal.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-dropdown.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-scrollspy.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tab.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-tooltip.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-popover.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-button.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-collapse.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-carousel.js"></script>
+    <script src="{{ STATIC_URL }}js/bootstrap-typeahead.js"></script>
+-->
+
+</body>
+</html>

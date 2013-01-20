@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load fiber_tags %}
+
+{% block title %}
+    {{ fiber_page.title }}
+{% endblock %}
+
+{% block menu-sub %}
+    {% show_menu "mainmenu" 1 2 "all_descendants" %} 
+{% endblock %}
+
+{% block content-title %}
+    {{ fiber_page.title }}
+{% endblock %}
+
+
+{% block content %}
+    {% show_page_content "content" %}
+{% endblock %}

@@ -1,0 +1,18 @@
+p {
+  margin: 0.75em 0;
+  line-height: 1.5em;
+}
+.rouge {
+  color: #f00;
+}
+li p,
+blockquote p {
+  margin: 0.5em 0;
+}
+img {
+  display: block;
+  margin: 30px auto;
+  padding: 5px;
+  box-shadow: 5px 5px 20px #646464;
+}
+

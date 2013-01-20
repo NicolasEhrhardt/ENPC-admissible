@@ -1,0 +1,323 @@
+/* ==============================================
+   FEUILLE DE STYLES DES GABARITS HTML/CSS
+   © Elephorm & Alsacreations.com
+   Conditions d'utilisation:
+   http://creativecommons.org/licenses/by/2.0/fr/
+   ============================================== */
+
+
+/* --- STYLES DE BASE POUR LE TEXTE ET LES PRINCIPAUX ÉLÉMENTS --- */
+
+/* Page */
+html {
+	font-size: 100%;
+}
+body {
+	margin: 0;
+	padding: 10px 20px;
+	font-family: Verdana, "Bitstream Vera Sans", "Lucida Grande", sans-serif;
+	font-size: .8em;
+	line-height: 1.25;
+	color: black;
+	background: white;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+	margin: 1em 0 .5em 0;
+}
+h1, h2 {
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+	font-weight: normal;
+}
+h1 {
+	font-size: 3em;
+	font-style: italic;
+}
+h2 {font-size: 1.8em;}
+h3 {font-size: 1.2em; border-bottom: 1px solid;}
+h4 {font-size: 1em;}
+
+/* Listes */
+ul, ol {
+	margin: .75em 0 .75em 24px;
+	padding: 0;
+}
+ul {
+	list-style: square;
+}
+li {
+	margin: 0;
+	padding: 0;
+}
+
+/* Paragraphes */
+p {
+	margin: .75em 0;
+}
+.rouge {
+color: red;
+}
+li p, blockquote p {
+	margin: .5em 0;
+}
+
+/* Citations */
+blockquote, q {
+	font-size: 1.1em;
+	font-style: italic;
+	font-family: Georgia, "Bitstream Vera Serif", Norasi, serif;
+}
+blockquote {
+	margin: .75em 0 .75em 24px;
+}
+cite {
+	font-style: italic;
+}
+
+/* Liens */
+a {
+	color: mediumblue;
+	text-decoration: underline;
+}
+a:hover, a:focus {
+	color: crimson;
+}
+a img {
+	border: none;
+}
+
+/* Divers éléments de type en-ligne */
+em {
+	font-style: italic;
+}
+strong {
+	font-weight: bold;
+	color: dimgray;
+}
+
+
+/* --- STYLES POUR CERTAINS CONTENUS DES GABARITS --- */
+
+pre, code {
+	font-size: 100%;
+	font-family: "Bitstream Vera Mono", "Lucida Console", "Courier New", monospace;
+}
+pre {
+	width: 90%;
+	overflow: auto;
+	overflow-y: hidden;
+	margin: .75em 0;
+	padding: 12px;
+	background: #eee;
+	color: #555;
+}
+pre strong {
+	font-weight: normal;
+	color: black;
+}
+/* --- COULEURS --- */
+
+/* Général */
+body {
+	background: url(../img/fond.jpg) repeat-y top;
+}
+a {
+	color: #FF6533;
+}
+a:hover, a:focus {
+	color: #FF4C00;
+}
+strong {
+	color: #A1B55D;
+}
+
+
+/* Page */
+#global {
+	background: url(../img/banniere-1.jpg) no-repeat top;
+	background: url(../img/fin.jpg) no-repeat bottom, url(../img/banniere-1.jpg) no-repeat top;
+}
+
+/* Navigation */
+#navigation {
+	background: transparent;
+}
+#navigation a {
+	color: gray;
+}
+#navigation a:hover, #navigation a:focus {
+}
+
+/* Contenu principal */
+#contenu {
+	color: #363B29;
+	background: transparent;
+}
+#contenu a {
+	color: #332510;
+}
+#contenu a:hover, #contenu a:focus {
+	color: #6E5122;
+}
+#contenu strong {
+	color: #181A12;
+}
+
+/* Pied de page */
+#pied {
+	color: #E6A948;
+	text-align: center;
+}
+
+
+/* --- POSITIONNEMENT --- */
+
+/* Page */
+html, body {
+	height: 100%; /* Voir -> Note 1 ci-dessous */
+}
+body {
+	padding: 0;
+}
+#global {
+	min-height: 100%; /* -> 1 */
+	width: 1100px;
+	position: absolute;
+	left: 50%;
+	overflow: hidden; /* -> 2 */
+	margin: 0;
+	margin-left: -550px;
+}
+#change {
+	width: 1024px;
+	overflow: hidden; /* -> 2 */
+	margin-top: 280px;
+	margin-left: 38px;
+}
+
+/* En-tête */
+#entete {
+	text-align: center;
+}
+#entete h1 {
+	margin: 0;
+}
+#entete h1 img {
+	float: left;
+	margin: 7px 20px 10px 0;
+}
+#entete .sous-titre {
+	margin: 4px 0 15px 0;
+}
+
+/* Menu de navigation */
+#navigation {
+	margin: auto;
+	padding: 12px 15px;
+	text-align: center;
+}
+#navigation ul {
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+#navigation li {
+	display: inline;
+}
+#navigation li a {
+	padding: 6px;
+	line-height: 1.5;
+	font-size: 1.2em;
+	text-decoration: none;
+}
+#navigation li a:hover {
+	border-bottom : 2px solid gray;
+}
+
+/* Contenu */
+#contenu {
+	padding: 10px 20px;
+}
+#contenu p, #contenu li {
+	/*line-height: 1.5;*/
+}
+#contenu .image {
+	float: right;
+}
+.range-bouton { /* generic container (i.e. div) for floating buttons */
+    overflow: hidden;
+    width: 100%;
+}
+#contenu a.button {
+    background: transparent url(../img/bg_button_a.gif) no-repeat top right;
+    color: #444;
+    display: block;
+    float: left;
+    font: normal 12px arial, sans-serif;
+    height: 24px;
+    margin-right: 6px;
+    padding-right: 18px; /* sliding doors padding */
+    text-decoration: none;
+}
+#contenu a.button span {
+    background: transparent url(../img/bg_button_span.gif) no-repeat;
+    display: block;
+    line-height: 14px;
+    padding: 5px 0 5px 18px;
+}
+#contenu a.button:active {
+    background-position: bottom right;
+    color: #000;
+    outline: none; /* hide dotted outline in Firefox */
+}
+#contenu a.button:active span {
+    background-position: bottom left;
+    padding: 6px 0 4px 18px; /* push text down 1px */
+} 
+
+/* Pied de page */
+#pied {
+	padding: 15px 20px;
+	font-size: .85em;
+}
+#pied p {
+	margin: 0;
+	position: relative;
+	bottom: 25px;
+}
+
+/* --- NOTES ---
+
+1.	Pour pouvoir utiliser une hauteur (height) ou une hauteur minimale
+	(min-height) sur un bloc, il faut que sont parent direct ait lui-même une
+	hauteur déterminée (donc toute valeur de height sauf "auto": hauteur en
+	pixels, em, autres unités...).
+	Si la hauteur du parent est en pourcentage, elle se réfère alors à la
+	hauteur du «grand-père», et ainsi de suite.
+	Ainsi, pour pouvoir utiliser un "min-height: 100%" sur div#contenu, il nous
+	faut:
+	- un parent (body) en "height: 100%";
+	- le parent de body également en "height: 100%".
+
+2.	Il faut éviter que les marges des enfants de div#global ne se transmettent
+	à leur parent. Notamment, le margin-top du premier enfant (ici, div#entete),
+	et le margin-bottom du dernier enfant (ici, div#pied).
+	On évite ce problème grâce à la propriété CSS overflow, qui bloque la
+	fusion des marges. En savoir plus sur la fusion des marges:
+	http://web.covertprestige.info/test
+		04-blocs-imbriques-et-fusion-des-marges.html
+
+3.	Les marges automatiques à gauche et à droite permettent de centrer notre
+	bloc div#global, et donc tout le site.
+	Pour aligner div#global à gauche, on fera:
+		margin-left: 0;
+		margin-rigth: auto;
+	Pour aligner div#global à droite, on fera:
+		margin-left: auto;
+		margin-right: 0;
+	Pour aligner div#global à droite avec un retrait (à droite) de 100px:
+		margin-left: auto;
+		margin-right: 100px;
+
+*/
