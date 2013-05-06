@@ -1,1 +1,0 @@
-/media/websites/stage-django/admissible/admissible/settings.py

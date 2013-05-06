@@ -12,8 +12,7 @@ urlpatterns = patterns('',
     # registration
     (r'^accounts/', include('registration.urls')),
     # Examples:
-    # url(r'^$', 'admissible.views.home', name='home'),
-    # url(r'^admissible/', include('admissible.foo.urls')),
+    url(r'^profile/', include('userprofile.urls')),
 
     # fiber
     (r'^api/v2/', include('fiber.rest_api.urls')),

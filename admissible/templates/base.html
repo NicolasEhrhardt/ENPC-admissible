@@ -6,57 +6,49 @@
 	<title>
             {% block title %}{% endblock %}
     </title>
-<!-- Bootstrap -->
+<!-- Bootstrap 
     <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
- <!-- Design -->
+-->
+<!-- Design -->
     {% load compressed %}
-    {% compressed_css 'new_core' %}
-   <script src="http://use.edgefonts.net/yellowtail.js"></script>
-    <script src="http://use.edgefonts.net/abril-fatface.js"></script>
+    {% compressed_css 'core' %}
+    <script src="http://use.edgefonts.net/kaushan-script.js"></script>     
+<!--    <script src="http://use.edgefonts.net/abril-fatface.js"></script> -->
 </head>
 
 <body>
-
-    <div id="menu-global">
-        {% block menu-global %}
-        <ul>
-            <li><a href="#inscription">Inscription</a></li>
-            <li><a href="#connexion">Connexion</a></li>
-            <li><a href="/accueil">Les ponts</a></li>
-        </ul><!-- #navigation -->
-        {% endblock %}
-    </div>
-
     <div id="container">
-		
-		<div id="content">
-
+        <div id="frame">
+            <div id="menu-global-links">
+                {% block menu-global %}
+                    <a href="{% url "registration_register" %}">Inscription<span class="arrow-down"></span></a>
+                    <a href="{% url "auth_login" %}">Connexion<span class="arrow-down"></span></a>
+                    <a href="/accueil">Les ponts<span class="arrow-down"></span></a>
+                {% endblock %}
+            </div>
+        
             <div id="menu-sub-space">
                 <div id="menu-sub">
                     {% block menu-sub %}{% endblock %}
                 </div>
             </div>
 
-            <div id="content-title">
-                <h1>
-                    {% block content-title %}{% endblock %}
-                </h1>
-            </div>
-
             <div id="content-view">	
+                <div id="content-title">
+                    <h1>
+                        {% block content-title %}{% endblock %}
+                    </h1>
+                </div>
+                
                 {% block content %}{% endblock %}
             </div>
-
-		</div>
-
-    </div>
-    
-    <div id="footer">
-        {% block footer %}
-        <p>
-            Code et design par NE'013
-        </p>
-        {% endblock %}
+            
+            <div id ="footer">
+                {% block footer %}
+                <p>Code et design par NE'013<span class="arrow-up"></span></p>
+                {% endblock %}
+            </div>
+        </div>
     </div>
 
 <!--

@@ -17,8 +17,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
         'NAME': 'enpc',                      # Or path to database file if using sqlite3.
-        'USER': 'django',                      # Not used with sqlite3.
-        'PASSWORD': 'talent',                  # Not used with sqlite3.
+        'USER': 'djangoadmissible',                      # Not used with sqlite3.
+        'PASSWORD': 'QJQRrfmez',                  # Not used with sqlite3.
         'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
@@ -68,8 +68,7 @@ STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
-    ('admissible', os.path.join(SITE_ROOT, 'admissible')),
-    ('fiber', os.path.join(SITE_ROOT, 'media')),
+    # ('fiber', os.path.join(SITE_ROOT, 'media')),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -144,6 +143,8 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django.contrib.flatpages',
     ## Apps
+    'admissible',
+    'userprofile',
     'registration',
     'pipeline',
     # fiber
@@ -209,10 +210,9 @@ STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 PIPELINE = True
 
 PIPELINE_CSS = {
-    'new_core': {
+    'core': {
         'source_filenames': (
-            'admissible/static/css/base.styl',
-            'admissible/static/css/style.styl',        
+            'styl/style.styl',        
         ),
         'output_filename': 'css/new_core.css',
         'extra_context': {
@@ -221,7 +221,7 @@ PIPELINE_CSS = {
     },
     'bootstrap': {
         'source_filenames': (
-            'admissible/static/css/bootstrap.min.css',
+            'css/bootstrap.min.css',
         ),
         'output_filename': 'css/bootstrap.min.css',
         'extra_context': {

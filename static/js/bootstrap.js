@@ -1,0 +1,1 @@
+/home/nicolas/Code/websites/stage-django/admissible/admissible/static/js/bootstrap.js
