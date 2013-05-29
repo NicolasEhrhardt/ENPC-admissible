@@ -13,7 +13,7 @@ html {
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/banner.png) top no-repeat, url(../img/footer.png) bottom no-repeat, #e1e1d7;
+  background: url("../img/banner.png") top no-repeat, url("../img/footer.png") bottom no-repeat, #e1e1d7;
   background-attachment: fixed, fixed;
   padding-bottom: 50px;
 }

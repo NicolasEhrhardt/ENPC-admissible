@@ -1,0 +1,11 @@
+{% extends "userprofile/userprofile_base.html" %}
+{% block title %}Profile utilisateur {{ user.username }}{% endblock %}
+{% block content %}
+<p>
+  Votre nom d'utilisateur est : {{ user.username }} 
+</p>
+{% block sub-content %}
+
+{% endblock %}
+
+{% endblock %}
