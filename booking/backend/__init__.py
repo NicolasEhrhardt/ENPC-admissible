@@ -16,7 +16,7 @@ def addQueue(user, serie, preference):
           )
   entry.save()
 
-@transaction.atomic
+@transaction.commit_on_success
 def refreshBooking(serie):
   """
     refresh booking for a particular serie
@@ -48,10 +48,10 @@ def refreshBooking(serie):
     assignSlot(processingQueue.user, processingSlot)
     processingQueue.delete()
 
-def assignSlot(user, slot)
+def assignSlot(user, slot):
   booking = SlotBooked(
-              user=processingQueue.user, 
-              slot=processingSlot, 
+              user=user, 
+              slot=slot, 
               dateBooked=datetime.utcnow().replace(tzinfo=utc),
               datePaid=None
             )

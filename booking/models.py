@@ -7,7 +7,7 @@ class SlotBooked(models.Model):
   user = models.ForeignKey(User)
   slot = models.ForeignKey(Slot)
   dateBooked = models.DateTimeField('Date Booked')
-  datePaid = models.DateTimeField('Date Paid')
+  datePaid = models.DateTimeField('Date Paid', null=True)
 
 class Queue(models.Model):
   user = models.ForeignKey(User)
