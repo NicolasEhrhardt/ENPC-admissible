@@ -56,5 +56,4 @@ def assignSlot(user, slot):
               datePaid=None
             )
   booking.save()
-
   # should send an email here
