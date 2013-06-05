@@ -6,7 +6,8 @@ from room.models import Slot
 class SlotBooked(models.Model):
   user = models.ForeignKey(User)
   slot = models.ForeignKey(Slot)
-  date = models.DateTimeField('Date Booked')
+  dateBooked = models.DateTimeField('Date Booked')
+  datePaid = models.DateTimeField('Date Paid')
 
 class Queue(models.Model):
   user = models.ForeignKey(User)

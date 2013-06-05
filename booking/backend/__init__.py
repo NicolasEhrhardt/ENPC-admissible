@@ -2,6 +2,7 @@ from booking.models import Queue, SlotBooked
 from room.models import Slot
 from datetime import datetime
 from django.utils.timezone import utc
+from django.db import transaction
 
 def addQueue(user, serie, preference):
   """
@@ -15,6 +16,7 @@ def addQueue(user, serie, preference):
           )
   entry.save()
 
+@transaction.atomic
 def refreshBooking(serie):
   """
     refresh booking for a particular serie
@@ -43,10 +45,16 @@ def refreshBooking(serie):
     else:
       processingSlot = slotEmpty.pop(-1)
     
-    booking = SlotBooked(
-                user=processingQueue.user, 
-                slot=processingSlot, 
-                date=datetime.utcnow().replace(tzinfo=utc)
-              )
+    assignSlot(processingQueue.user, processingSlot)
     processingQueue.delete()
-    booking.save()
+
+def assignSlot(user, slot)
+  booking = SlotBooked(
+              user=processingQueue.user, 
+              slot=processingSlot, 
+              dateBooked=datetime.utcnow().replace(tzinfo=utc),
+              datePaid=None
+            )
+  booking.save()
+
+  # should send an email here
