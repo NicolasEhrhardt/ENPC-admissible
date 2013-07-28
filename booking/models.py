@@ -9,8 +9,8 @@ from django.utils.timezone import utc
 from django.conf import settings
 
 class SlotBooked(models.Model):
-  user = models.ForeignKey(User)
-  slot = models.ForeignKey(Slot)
+  user = models.ForeignKey(User, unique=True)
+  slot = models.ForeignKey(Slot, unique=True)
   dateBooked = models.DateTimeField('Date Booked')
   datePaid = models.DateTimeField('Date Paid', null=True)
   
@@ -27,7 +27,7 @@ class SlotBooked(models.Model):
     return dateLimit() > datetime.utcnow().replace(tzinfo=utc)
 
 class Queue(models.Model):
-  user = models.ForeignKey(User)
+  user = models.ForeignKey(User, unique=True)
   serie = models.IntegerField()
   maxPeople_preference = models.IntegerField()
   dateAdded = models.DateTimeField('Date Added')
