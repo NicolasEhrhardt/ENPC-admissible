@@ -8,14 +8,14 @@
 html {
   margin: 0;
   padding: 0;
-  height: 100%;
 }
 body {
   margin: 0;
   padding: 0;
-  background: url(../img/banner.png) top no-repeat, url(../img/footer.png) bottom no-repeat, #e1e1d7;
+  width: 100%;
+  position: absolute;
+  background: url(../img/repeat.png) top repeat-y, url(../img/banner.png) top no-repeat, url(../img/footer.png) bottom no-repeat, #e1e1d7;
   background-attachment: fixed, fixed;
-  padding-bottom: 50px;
 }
 #container {
   position: relative;
@@ -23,7 +23,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   margin-top: 180px;
-  margin-bottom: 90px;
+  margin-bottom: 160px;
   padding: 40px 0 40px 0px;
   border-top: solid 1px;
   border-bottom: solid 1px;
@@ -146,16 +146,31 @@ body {
 #container #frame #content-view li {
   margin: 10px 0;
 }
-#container #frame #footer {
+#container #frame #content-view .errorlist {
+  color: #f00;
+  font-size: 0.9em;
+  margin-top: 0;
+}
+#container #frame #content-view a {
+  color: #08c;
+  text-decoration: none;
+}
+#container #frame #content-view a:visited {
+  color: #08c;
+}
+#container #frame #content-view a:hover {
+  text-decoration: underline;
+}
+#foot {
   position: absolute;
-  bottom: -60px;
+  bottom: 160px;
   right: 0;
 }
-#container #frame #footer p {
+#foot p {
   margin: 0;
   float: right;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px 0 0 0;
+  border-radius: 5px 0 0 0;
   background: #bd987d;
   color: #141414;
   padding: 6px 13px;
@@ -165,7 +180,7 @@ body {
   box-shadow: 5px 5px 20px #787878;
   position: relative;
 }
-#container #frame #footer p .arrow-up {
+#foot p .arrow-up {
   width: 0;
   height: 0;
   line-height: 0;

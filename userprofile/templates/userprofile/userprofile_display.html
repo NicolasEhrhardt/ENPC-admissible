@@ -1,11 +1,14 @@
 {% extends "userprofile/userprofile_base.html" %}
-{% block title %}Profile utilisateur {{ user.username }}{% endblock %}
+{% block home-link %}current{% endblock %}
+
 {% block content %}
-<p>
-  Votre nom d'utilisateur est : {{ user.username }} 
-</p>
-{% block sub-content %}
-
-{% endblock %}
-
+  <h3>Identifiants</h3>
+  <p>
+    Nom d'utilisateur :<br/>
+    {{ user.username }}<br/><br/>
+    Email :<br/>
+    {{ user.email }}
+  </p>
+  {% block content-sub %}
+  {% endblock %}
 {% endblock %}

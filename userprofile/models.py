@@ -10,10 +10,10 @@ class UserProfile(models.Model):
   lastname = models.CharField(max_length=255)
   number = models.CharField(max_length=255)
   serie = models.IntegerField()
-  sex_choices = (
+  sexe_choices = (
     ('M', 'Homme'),
     ('F', 'Femme'),
   )
-  sex = models.CharField(max_length=255, 
-                          choices=sex_choices) 
+  sexe = models.CharField(max_length=255, 
+                          choices=sexe_choices) 
   phoneNumber = models.CharField(max_length=255)

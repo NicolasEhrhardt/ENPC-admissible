@@ -1,8 +1,11 @@
 from django.conf.urls.defaults import *
-from userprofile import views
+from userprofile.views import display, edit
 
 urlpatterns = patterns ('',
-                        url(r'', 
-                        views.display,
-                        name='raw_display'),
+                        url(r'^home$', 
+                          display,
+                          name='profile_home'),
+                        url(r'^edit$',
+                          edit,
+                          name='profile_edit'),
                       )

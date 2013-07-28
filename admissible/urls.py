@@ -11,8 +11,11 @@ urlpatterns = patterns('',
     ('^page/', include('django.contrib.flatpages.urls')),
     # registration
     (r'^accounts/', include('registration.urls')),
-    # Examples:
+    # profile
     url(r'^profile/', include('userprofile.urls')),
+    # profile
+    url(r'^booking/', include('booking.urls')),
+
 
     # fiber
     (r'^api/v2/', include('fiber.rest_api.urls')),

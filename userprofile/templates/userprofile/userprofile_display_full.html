@@ -1,7 +1,18 @@
 {% extends "userprofile/userprofile_display.html" %}
-{% block sub-content %}
-<p>
-  Voici vos information de profil
-</p>
-
+{% block content-sub %}
+  <p>
+    <h3>Profil (<a href="{% url "profile_edit" %}">Éditer</a>)</h3>
+    Nom :<br/>
+    {{ lastname }}<br/><br/>
+    Prénom :<br/>
+    {{ firstname }}<br/><br/>
+    Numéro de candidat :<br/>
+    {{ number }}<br/><br/>
+    Serie :<br/>
+    {{ serie }}<br/><br/>
+    Sexe :<br/>
+    {{ sexe }}<br/><br/>
+    Téléphone :<br/>
+    {{ phoneNumber }}
+  </p>
 {% endblock %}

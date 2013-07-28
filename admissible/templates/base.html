@@ -6,9 +6,7 @@
 	<title>
             {% block title %}{% endblock %}
     </title>
-<!-- Bootstrap 
-    <link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">
--->
+    <!--<link href="{{ STATIC_URL }}css/bootstrap.min.css" rel="stylesheet" media="screen">-->
 <!-- Design -->
     {% load compressed %}
     {% compressed_css 'core' %}
@@ -21,9 +19,12 @@
         <div id="frame">
             <div id="menu-global-links">
                 {% block menu-global %}
-                    <a href="{% url "registration_register" %}">Inscription<span class="arrow-down"></span></a>
-                    <a href="{% url "auth_login" %}">Connexion<span class="arrow-down"></span></a>
-                    <a href="/accueil">Les ponts<span class="arrow-down"></span></a>
+                    <a href="/accueil">L'accueil aux Ponts<span class="arrow-down"></span></a>
+                  {% if user.is_authenticated %}
+                    <a href="{% url "profile_home" %}">Compte admissible<span class="arrow-down"></span></a>
+                  {% else %}
+                    <a href="{% url "auth_login" %}">Connexion / Inscription<span class="arrow-down"></span></a>
+                  {% endif %}
                 {% endblock %}
             </div>
         
@@ -43,14 +44,14 @@
                 {% block content %}{% endblock %}
             </div>
             
-            <div id ="footer">
-                {% block footer %}
-                <p>Code et design par NE'013<span class="arrow-up"></span></p>
-                {% endblock %}
-            </div>
         </div>
     </div>
-
+    <div id ="foot">
+        <p>
+          Code et design par NE'013
+          <!--<span class="arrow-up"></span>-->
+        </p>
+    </div>
 <!--
     <script src="{{ STATIC_URL }}js/jquery.js"></script>
     <script src="{{ STATIC_URL }}js/bootstrap-transition.js"></script>

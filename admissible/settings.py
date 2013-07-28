@@ -28,11 +28,17 @@ DATABASES = {
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
 # although not all choices may be available on all operating systems.
 # In a Windows environment this must be set to your system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'Europe/Paris'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr'
+
+gettext = lambda s: s
+
+LANGUAGES = (
+  ('fr', gettext('French')),
+)
 
 SITE_ID = 1
 
@@ -146,10 +152,11 @@ INSTALLED_APPS = (
     'admissible',
     'userprofile',
     'registration',
-    'pipeline',
-    # website model
     'room',
     'booking',
+    # dev tool
+    'pipeline',
+    'south',
     # fiber
     'mptt',
     'compressor',
@@ -162,10 +169,15 @@ INSTALLED_APPS = (
 
 # Installed App variables
 ACCOUNT_ACTIVATION_DAYS = 7
+DAYS_TO_PAY = 10
 
 # Emails
 
 EMAIL_HOST = 'localhost'
+
+# Landing page after login
+
+LOGIN_REDIRECT_URL = '/profile/home'
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

@@ -1,1 +1,18 @@
 {% extends "base.html" %}
+
+{% block title %}
+  Compte utilisateur {{ user.username }}
+{% endblock %}
+
+{% block content-title %}
+  Compte 
+{% endblock %}
+
+{% block menu-sub %}
+  <ul>
+    <li class="{% block home-link %}{% endblock %}"><a href="{% url "profile_home" %}">Profil</a></li>
+    <li class="{% block book-link %}{% endblock %}"><a href="{% url "booking_status" %}">Réservation</a></li>
+    <li class="{% block deco-link %}{% endblock %}"><a href="{% url "auth_logout" %}">Déconnection</a></li>
+  </ul>
+{% endblock %}
+

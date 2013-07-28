@@ -3,13 +3,13 @@
 from django.db import models
 
 class Room(models.Model):
-  number = models.IntegerField()
+  number = models.IntegerField(unique=True)
   number.short_description = u'Numéro'
   maxPeople = models.IntegerField()
   type_choices = (
-    ('S', 'single'),
-    ('D', 'double'),
-    ('B', 'bimonee'),
+    ('S', u'simple'),
+    ('D', u'double'),
+    ('B', u'bimonée'),
   )
   type = models.CharField(max_length=255, 
                           choices=type_choices) 

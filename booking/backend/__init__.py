@@ -8,13 +8,18 @@ def addQueue(user, serie, preference):
   """
     Add a new user in the queue
   """
-  entry = Queue(
+  try:
+    SlotBooked.objects.get(user=user)
+    raise Exception("User already has booked a room")
+
+  except SlotBooked.DoesNotExist:
+    entry = Queue(
             user=user, 
             serie=serie, 
             maxPeople_preference=preference,
-            date=datetime.utcnow().replace(tzinfo=utc)
+            dateAdded=datetime.utcnow().replace(tzinfo=utc)
           )
-  entry.save()
+    entry.save()
 
 @transaction.commit_on_success
 def refreshBooking(serie):
@@ -33,7 +38,7 @@ def refreshBooking(serie):
                        .filter(
                         serie=serie
                        )
-                       .order_by('date'))
+                       .order_by('dateAdded'))
 
   # assigning room for people in the queue until there is no space
   while len(slotEmpty) > 0 and len(queueAwaiting) > 0:
