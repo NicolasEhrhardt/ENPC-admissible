@@ -8,6 +8,8 @@
   Compte 
 {% endblock %}
 
+{% block user-section %}current{% endblock %}
+
 {% block menu-sub %}
   <ul>
     <li class="{% block home-link %}{% endblock %}"><a href="{% url "profile_home" %}">Profil</a></li>

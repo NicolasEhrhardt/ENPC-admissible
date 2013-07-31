@@ -1,0 +1,16 @@
+{% extends "booking/booking_status_base.html" %}
+
+{% block content %}
+  <form action="{% url "booking_add" %}" method="post">
+    <table>
+      {{ form.as_table }}
+      {% csrf_token %}
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="Confirmer" />
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endblock %}

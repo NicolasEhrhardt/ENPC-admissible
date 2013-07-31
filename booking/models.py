@@ -14,6 +14,9 @@ class SlotBooked(models.Model):
   dateBooked = models.DateTimeField('Date Booked')
   datePaid = models.DateTimeField('Date Paid', null=True)
   
+  def __unicode__(self):
+    return str(self.slot)
+
   def isPaid(self):
     if datePaid == Field.null:
       return False
@@ -27,6 +30,10 @@ class SlotBooked(models.Model):
     return dateLimit() > datetime.utcnow().replace(tzinfo=utc)
 
 class Queue(models.Model):
+
+  def __unicode__(self):
+    return self.user.username
+
   user = models.ForeignKey(User, unique=True)
   serie = models.IntegerField()
   maxPeople_preference = models.IntegerField()

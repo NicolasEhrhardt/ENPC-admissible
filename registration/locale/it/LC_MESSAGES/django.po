@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-registration 0.8 alpha-1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-07-01 14:33+0200\n"
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
 "PO-Revision-Date: 2011-08-04 12:41-0600\n"
 "Last-Translator: Flavio Curella <flavio.curella@gmail.com>\n"
 "Language-Team: Italiano <it@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -19,71 +20,150 @@ msgstr ""
 "X-Poedit-Language: Italian\n"
 "X-Poedit-Country: ITALY\n"
 
-#: .\admin.py:23
+#: admin.py:23
 msgid "Activate users"
 msgstr "Attiva utenti"
 
-#: .\admin.py:43
+#: admin.py:43
 msgid "Re-send activation emails"
 msgstr "Re-invia email di attivazione"
 
-#: .\forms.py:35
+#: forms.py:34
 msgid "Username"
 msgstr "Nome utente"
 
-#: .\forms.py:36
-msgid "This value must contain only letters, numbers and underscores."
+#: forms.py:35
+#, fuzzy
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Questo valore può contenere solo lettere, numeri e sottolineature."
 
-#: .\forms.py:39
-msgid "Email address"
-msgstr "indirizzo email"
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
 
-#: .\forms.py:41
+#: forms.py:38
 msgid "Password"
 msgstr "Password"
 
-#: .\forms.py:43
+#: forms.py:40
 msgid "Password (again)"
 msgstr "Password (di nuovo)"
 
-#: .\forms.py:55
+#: forms.py:50
 msgid "A user with that username already exists."
 msgstr "Questo nome utente è già usato."
 
-#: .\forms.py:67
+#: forms.py:64
 msgid "The two password fields didn't match."
 msgstr "Le password inserite non coincidono."
 
-#: .\forms.py:78
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "Dichiaro di aver letto e di approvare le Condizioni di Servizio"
 
-#: .\forms.py:79
+#: forms.py:76
 msgid "You must agree to the terms to register"
 msgstr "Per registrarsi bisogna approvare le condizioni"
 
-#: .\forms.py:95
-msgid "This email address is already in use. Please supply a different email address."
-msgstr "Questo indirizzo email è già in uso. Inserisci un altro indirizzo email."
+#: forms.py:92
+msgid ""
+"This email address is already in use. Please supply a different email "
+"address."
+msgstr ""
+"Questo indirizzo email è già in uso. Inserisci un altro indirizzo email."
 
-#: .\forms.py:122
-msgid "Registration using free email addresses is prohibited. Please supply a different email address."
-msgstr "La registrazione con indirizzi email gratis non è permessa. Inserisci un altro indirizzo email."
+#: forms.py:119
+msgid ""
+"Registration using free email addresses is prohibited. Please supply a "
+"different email address."
+msgstr ""
+"La registrazione con indirizzi email gratis non è permessa. Inserisci un "
+"altro indirizzo email."
 
-#: .\models.py:165
+#: models.py:182
 msgid "user"
 msgstr "utente"
 
-#: .\models.py:166
+#: models.py:183
 msgid "activation key"
 msgstr "chiave di attivazione"
 
-#: .\models.py:171
+#: models.py:188
 msgid "registration profile"
 msgstr "profilo di registrazione"
 
-#: .\models.py:172
+#: models.py:189
 msgid "registration profiles"
 msgstr "profili di registrazione"
 
+#: templates/activation_email.txt:2
+#, fuzzy
+msgid "Activate account at"
+msgstr "Attiva utenti"
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "chiave di attivazione"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "Re-invia email di attivazione"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "Password (di nuovo)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "Email address"
+#~ msgstr "indirizzo email"

@@ -3,6 +3,7 @@ from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
 
 from booking.models import SlotBooked, Queue
+from booking.forms import BookingForm
 from booking import backend
 from room.models import Room
 from userprofile.models import UserProfile
@@ -32,7 +33,10 @@ def status(request):
               })
 
     except SlotBooked.DoesNotExist:
-      return render(request, "booking/booking_status_start.html")
+      return render(request, 'booking/booking_start.html', {
+                'form': forms.BookingForm(),
+              }
+            )
 
 @login_required
 def addQueue(request):
@@ -42,8 +46,23 @@ def addQueue(request):
     return render(request, "booking/booking_status_empty_profile.html")
   
   try:
-    backend.addQueue(request.user, userprofile.serie, 1)
-    backend.refreshBooking(userprofile.serie)
-    return redirect("booking.views.status") 
+    if request.method == 'POST': # If the form has been submitted...
+      form = BookingForm(request.POST) # A form bound to the POST data
+      
+      if form.is_valid(): 
+        maxPeople_preference = form.cleaned_data['maxPeople_preference']
+        backend.addQueue(request.user, userprofile.serie, maxPeople_preference)
+        backend.refreshBooking(userprofile.serie)
+        return redirect("booking.views.status") 
+      else:
+        render(request, 'booking/booking_start.html', {
+                'form': form,
+          }
+        )
+    else:
+      return redirect("booking.views.status") 
   except: 
-    return render(request, "booking/booking_status_already_booked.html")
+    return render(request, 'booking/booking_start.html', {
+                'form': forms.BookingForm(),
+              }
+            )

@@ -1,0 +1,17 @@
+{% extends "userprofile/userprofile_base.html" %}
+{% block home-link %}current{% endblock %}
+
+{% block content %}
+  <form action="{% url "profile_edit" %}" method="post">
+    <table>
+      {{ form.as_table }}
+      {% csrf_token %}
+      <tr>
+        <td></td>
+        <td>
+          <input type="submit" value="Confirmer" />
+        </td>
+      </tr>
+    </table>
+  </form>
+{% endblock %}

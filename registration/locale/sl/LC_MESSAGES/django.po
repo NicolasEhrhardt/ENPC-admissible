@@ -7,12 +7,13 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.8.1beta\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-12 14:09-0500\n"
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
 "PO-Revision-Date: 2011-11-05 21:20+0100\n"
 "Last-Translator: Marko Mrdjenovic <m@mmm.si>\n"
 "Language-Team: Slovenian <domen@dev.si>\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Poedit-Language: Slovenian\n"
 "X-Poedit-Country: SLOVENIA\n"
@@ -25,63 +26,142 @@ msgstr "Aktiviraj uporabnike"
 msgid "Re-send activation emails"
 msgstr "Ponovno pošlji aktivacijsko e-pošto"
 
-#: forms.py:35
-msgid "username"
+#: forms.py:34
+#, fuzzy
+msgid "Username"
 msgstr "uporabniško ime"
 
-#: forms.py:36
-msgid "This value must contain only letters, numbers and underscores."
+#: forms.py:35
+#, fuzzy
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Vrednost lahko vsebuje samo črke, cifre in podčrtaje."
 
-#: forms.py:39
-msgid "Email address"
-msgstr "E-naslov"
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
 
-#: forms.py:41
+#: forms.py:38
 msgid "Password"
 msgstr "Geslo"
 
-#: forms.py:43
+#: forms.py:40
 msgid "Password (again)"
 msgstr "Geslo (ponovno)"
 
-#: forms.py:55
+#: forms.py:50
 msgid "A user with that username already exists."
 msgstr "Uporabnik s tem uporabniškim imenom že obstaja."
 
-#: forms.py:67
+#: forms.py:64
 msgid "The two password fields didn't match."
 msgstr "Polji z gesli se ne ujemata."
 
-#: forms.py:78
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "Strinjam se s pogoji uporabe"
 
-#: forms.py:79
+#: forms.py:76
 msgid "You must agree to the terms to register"
 msgstr "Za registracijo se morate strinjati s pogoji uporabe"
 
-#: forms.py:95
-msgid "This email address is already in use. Please supply a different email address."
+#: forms.py:92
+msgid ""
+"This email address is already in use. Please supply a different email "
+"address."
 msgstr "E-naslov je že v uporabi, prosimo vnesite drugega."
 
-#: forms.py:122
-msgid "Registration using free email addresses is prohibited. Please supply a different email address."
-msgstr "Registracija ni mogoča z brezplačnimi e-naslovi. Prosimo vnesite drug e-naslov."
+#: forms.py:119
+msgid ""
+"Registration using free email addresses is prohibited. Please supply a "
+"different email address."
+msgstr ""
+"Registracija ni mogoča z brezplačnimi e-naslovi. Prosimo vnesite drug e-"
+"naslov."
 
-#: models.py:165
+#: models.py:182
 msgid "user"
 msgstr "Uporabnik"
 
-#: models.py:166
+#: models.py:183
 msgid "activation key"
 msgstr "Aktivacijski ključ"
 
-#: models.py:171
+#: models.py:188
 msgid "registration profile"
 msgstr "Registracijski profil"
 
-#: models.py:172
+#: models.py:189
 msgid "registration profiles"
 msgstr "Registracijski profili"
 
+#: templates/activation_email.txt:2
+#, fuzzy
+msgid "Activate account at"
+msgstr "Aktiviraj uporabnike"
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "Aktivacijski ključ"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "Ponovno pošlji aktivacijsko e-pošto"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "Geslo (ponovno)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "Email address"
+#~ msgstr "E-naslov"

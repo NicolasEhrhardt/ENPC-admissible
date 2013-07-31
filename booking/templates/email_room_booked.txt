@@ -1,0 +1,10 @@
+Bonjour {{ username }},
+
+Nous avons le plaisir de vous annoncer qu'une chambre aux Ponts vous a été attribuée pour vos oraux !
+Pour valider votre réservation, merci de vous connecter sur le site dans les plus bref délais afin de régler la somme due. Quelques secondes seulement vous serons nécessaire.
+
+En cas de non réception de votre paiement dans les délais impartis (durée renseignée sur le site), votre réservation ne sera pas prise en compte et la chambre libérée pour d'autres candidats.
+
+Merci de votre compréhension !
+
+L'équipe du site d'accueil des admissibles aux Ponts

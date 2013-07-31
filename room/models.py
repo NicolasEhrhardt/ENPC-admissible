@@ -15,6 +15,9 @@ class Room(models.Model):
                           choices=type_choices) 
   price = models.DecimalField(max_digits=8, 
                               decimal_places=2)
+  def __unicode__(self):
+    return self.pk
+
   def trad_number(self):
     return self.number
 
@@ -27,3 +30,8 @@ class Room(models.Model):
 class Slot(models.Model):
   room = models.ForeignKey(Room)
   serie = models.IntegerField()
+
+  def __unicode__(self):
+    return str(self.room.number) + " - " + str(self.serie)
+
+ 

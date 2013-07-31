@@ -8,10 +8,11 @@ msgid ""
 msgstr ""
 "Project-Id-Version: django-registration 0.8 \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: \n" 
-"PO-Revision-Date: \n" 
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
+"PO-Revision-Date: \n"
 "Last-Translator: Rune Bromer <rb@konstellation.dk>\n"
 "Language-Team: \n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -24,69 +25,141 @@ msgstr "Aktiver brugere"
 msgid "Re-send activation emails"
 msgstr "Gensend aktiveringsemails"
 
-#: forms.py:35
+#: forms.py:34
 msgid "Username"
 msgstr "Brugernavn"
 
-#: forms.py:36
-msgid "This value must contain only letters, numbers and underscores."
+#: forms.py:35
+#, fuzzy
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "V¾rdien m kun indeholde bogstaver, tal og underscore."
 
-#: forms.py:39
-msgid "Email address"
-msgstr "E-mailadresse"
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
 
-#: forms.py:41
+#: forms.py:38
 msgid "Password"
 msgstr "Password"
 
-#: forms.py:43
+#: forms.py:40
 msgid "Password (again)"
 msgstr "Password (gentag)"
 
-#: forms.py:55
+#: forms.py:50
 msgid "A user with that username already exists."
 msgstr "Der findes allerede en bruger med dette brugernavn."
 
-#: forms.py:67
+#: forms.py:64
 msgid "The two password fields didn't match."
 msgstr "De 2 passwordfelter er ikke ens."
 
-#: forms.py:78
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "I har l¾st og accepterer betingelserne."
 
-#: forms.py:79
+#: forms.py:76
 msgid "You must agree to the terms to register"
 msgstr "Du skal acceptere betingelserne for at registere"
 
-#: forms.py:95
+#: forms.py:92
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
-msgstr ""
-"Denne emailadresse er allerede i brug. Benyt venligst en anden. "
+msgstr "Denne emailadresse er allerede i brug. Benyt venligst en anden. "
 
-#: forms.py:122
+#: forms.py:119
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
 msgstr ""
-"Registrering med gratis emailadresser er ikke muligt. V¾lg venligst en "
-"anden emailadresse"
+"Registrering med gratis emailadresser er ikke muligt. V¾lg venligst en anden "
+"emailadresse"
 
-#: models.py:165
+#: models.py:182
 msgid "user"
 msgstr "bruger"
 
-#: models.py:166
+#: models.py:183
 msgid "activation key"
 msgstr "Aktiveringsn¿gle"
 
-#: models.py:171
+#: models.py:188
 msgid "registration profile"
 msgstr "Registreringsprofil"
 
-#: models.py:172
+#: models.py:189
 msgid "registration profiles"
 msgstr "Registreringprofiler"
+
+#: templates/activation_email.txt:2
+#, fuzzy
+msgid "Activate account at"
+msgstr "Aktiver brugere"
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "Aktiveringsn¿gle"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "Gensend aktiveringsemails"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "Password (gentag)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "Email address"
+#~ msgstr "E-mailadresse"

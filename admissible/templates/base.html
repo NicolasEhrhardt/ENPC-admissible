@@ -19,11 +19,11 @@
         <div id="frame">
             <div id="menu-global-links">
                 {% block menu-global %}
-                    <a href="/accueil">L'accueil aux Ponts<span class="arrow-down"></span></a>
+                    <a href="/" class="{% if fiber_page %}current{% endif %}">L'accueil aux Ponts</a>
                   {% if user.is_authenticated %}
-                    <a href="{% url "profile_home" %}">Compte admissible<span class="arrow-down"></span></a>
+                    <a href="{% url "profile_home" %}" class="{% block user-section %}{% endblock %}">Compte admissible</a>
                   {% else %}
-                    <a href="{% url "auth_login" %}">Connexion / Inscription<span class="arrow-down"></span></a>
+                    <a href="{% url "auth_login" %}" class="{% block reg-section %}{% endblock %}">Connexion / Inscription</a>
                   {% endif %}
                 {% endblock %}
             </div>

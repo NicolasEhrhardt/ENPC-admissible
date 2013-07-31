@@ -9,66 +9,165 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-01-22 12:49+0100\n"
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
 "PO-Revision-Date: 2009-01-22 12:49+0100\n"
 "Last-Translator: Björn Kristinsson <bjornkri@gmail.com>\n"
 "Language-Team: Icelandic\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: forms.py:36
-msgid "username"
+#: admin.py:23
+msgid "Activate users"
+msgstr ""
+
+#: admin.py:43
+#, fuzzy
+msgid "Re-send activation emails"
+msgstr "einkennislykill"
+
+#: forms.py:34
+#, fuzzy
+msgid "Username"
 msgstr "notandanafn"
 
-#: forms.py:39
-msgid "email address"
-msgstr "netfang"
+#: forms.py:35
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
+msgstr ""
 
-#: forms.py:41
-msgid "password"
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
+
+#: forms.py:38
+#, fuzzy
+msgid "Password"
 msgstr "lykilorð"
 
-#: forms.py:43
-msgid "password (again)"
+#: forms.py:40
+#, fuzzy
+msgid "Password (again)"
 msgstr "lykilorð (aftur)"
 
-#: forms.py:55
-msgid "This username is already taken. Please choose another."
-msgstr "Þetta notendanafn er þegar á skrá. Vinsamlega reyndu annað."
+#: forms.py:50
+msgid "A user with that username already exists."
+msgstr ""
 
-#: forms.py:67
-msgid "You must type the same password each time"
-msgstr "Lykilorðin verða að vera eins "
+#: forms.py:64
+msgid "The two password fields didn't match."
+msgstr ""
 
-#: forms.py:90
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "Ég hef lesið og samþykki skilmálana"
 
-#: forms.py:107
+#: forms.py:76
+msgid "You must agree to the terms to register"
+msgstr ""
+
+#: forms.py:92
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
 msgstr "Þetta netfang er þegar á skrá. Vinsamlegast notaðu annað netfang."
 
-#: forms.py:133
+#: forms.py:119
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
-msgstr "Óheimilt er að nota ókeypis netföng. Vinsamlegast notaðu annað netfang."
+msgstr ""
+"Óheimilt er að nota ókeypis netföng. Vinsamlegast notaðu annað netfang."
 
-#: models.py:218
+#: models.py:182
 msgid "user"
 msgstr "notandi"
 
-#: models.py:219
+#: models.py:183
 msgid "activation key"
 msgstr "einkennislykill"
 
-#: models.py:224
+#: models.py:188
 msgid "registration profile"
 msgstr "skráningarprófíll"
 
-#: models.py:225
+#: models.py:189
 msgid "registration profiles"
 msgstr "skráningarprófílar"
+
+#: templates/activation_email.txt:2
+msgid "Activate account at"
+msgstr ""
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "einkennislykill"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "einkennislykill"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "lykilorð (aftur)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "email address"
+#~ msgstr "netfang"
+
+#~ msgid "This username is already taken. Please choose another."
+#~ msgstr "Þetta notendanafn er þegar á skrá. Vinsamlega reyndu annað."
+
+#~ msgid "You must type the same password each time"
+#~ msgstr "Lykilorðin verða að vera eins "

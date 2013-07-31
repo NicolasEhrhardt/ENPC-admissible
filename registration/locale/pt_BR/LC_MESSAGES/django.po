@@ -8,74 +8,168 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2007-09-19 19:30-0500\n"
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: forms.py:38
-msgid "username"
-msgstr "usuário"
-
-#: forms.py:41
-msgid "email address"
-msgstr "endereço de email"
-
-#: forms.py:43
-msgid "password"
+#: admin.py:23
+msgid "Activate users"
 msgstr ""
 
-#: forms.py:45
-msgid "password (again)"
-msgstr "senha (novamente)"
+#: admin.py:43
+#, fuzzy
+msgid "Re-send activation emails"
+msgstr "chave de ativação"
 
-#: forms.py:54
-msgid "Usernames can only contain letters, numbers and underscores"
+#: forms.py:34
+#, fuzzy
+msgid "Username"
+msgstr "usuário"
+
+#: forms.py:35
+#, fuzzy
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Nomes de usuário apenas podem conter letras, números, e underscore"
 
-#: forms.py:59
-msgid "This username is already taken. Please choose another."
-msgstr "Este nome de usuário já existe. Por favor, escolha outro."
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
 
-#: forms.py:68
-msgid "You must type the same password each time"
-msgstr "Você deve escrever a mesma senha nos dois campos"
+#: forms.py:38
+msgid "Password"
+msgstr ""
 
-#: forms.py:96
+#: forms.py:40
+#, fuzzy
+msgid "Password (again)"
+msgstr "senha (novamente)"
+
+#: forms.py:50
+msgid "A user with that username already exists."
+msgstr ""
+
+#: forms.py:64
+msgid "The two password fields didn't match."
+msgstr ""
+
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "Eu lí e concordo com os Termos de Uso do serviço"
 
-#: forms.py:105
+#: forms.py:76
 msgid "You must agree to the terms to register"
 msgstr "Você deve concordar com os termos para registrar-se"
 
-#: forms.py:124
+#: forms.py:92
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
-msgstr "Este endereço de email já está em uso. Por favor, informe um endereço de email diferente."
+msgstr ""
+"Este endereço de email já está em uso. Por favor, informe um endereço de "
+"email diferente."
 
-#: forms.py:149
+#: forms.py:119
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
-msgstr "Registrar-se com contas de email gratuitos está proibido. Por favor, informe um endereço de email diferente."
+msgstr ""
+"Registrar-se com contas de email gratuitos está proibido. Por favor, informe "
+"um endereço de email diferente."
 
-#: models.py:188
+#: models.py:182
 msgid "user"
 msgstr "usuário"
 
-#: models.py:189
+#: models.py:183
 msgid "activation key"
 msgstr "chave de ativação"
 
-#: models.py:194
+#: models.py:188
 msgid "registration profile"
 msgstr "profile de registro"
 
-#: models.py:195
+#: models.py:189
 msgid "registration profiles"
 msgstr "profiles de registro"
+
+#: templates/activation_email.txt:2
+msgid "Activate account at"
+msgstr ""
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "chave de ativação"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "chave de ativação"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "senha (novamente)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "email address"
+#~ msgstr "endereço de email"
+
+#~ msgid "This username is already taken. Please choose another."
+#~ msgstr "Este nome de usuário já existe. Por favor, escolha outro."
+
+#~ msgid "You must type the same password each time"
+#~ msgstr "Você deve escrever a mesma senha nos dois campos"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-10-12 14:09-0500\n"
+"POT-Creation-Date: 2013-07-28 16:23+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Implayo s.r.o. <michal.pilar@implayo.cz>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,70 +25,143 @@ msgstr "Aktivovat uživatele"
 msgid "Re-send activation emails"
 msgstr "Znovu odeslat aktivační e-maily"
 
-#: forms.py:35
-msgid "username"
+#: forms.py:34
+#, fuzzy
+msgid "Username"
 msgstr "uživatelské jméno"
 
-#: forms.py:36
-msgid "This value must contain only letters, numbers and underscores."
+#: forms.py:35
+#, fuzzy
+msgid "This value may contain only letters, numbers and @/./+/-/_ characters."
 msgstr "Tato hodnota může obsahovat pouze písmena, čísla a podtržítka."
 
-#: forms.py:39
-msgid "Email address"
-msgstr "E-mailová adresa"
+#: forms.py:36
+msgid "E-mail"
+msgstr ""
 
-#: forms.py:41
+#: forms.py:38
 msgid "Password"
 msgstr "Heslo"
 
-#: forms.py:43
+#: forms.py:40
 msgid "Password (again)"
 msgstr "Heslo (znovu)"
 
-#: forms.py:55
+#: forms.py:50
 msgid "A user with that username already exists."
 msgstr "Uživatel s tímto jménem již existuje."
 
-#: forms.py:67
+#: forms.py:64
 msgid "The two password fields didn't match."
 msgstr "Zadaná 2 hesla se neshodují."
 
-#: forms.py:78
+#: forms.py:75
 msgid "I have read and agree to the Terms of Service"
 msgstr "Přečetl jsem si a souhlasím s podmínkami služby"
 
-#: forms.py:79
+#: forms.py:76
 msgid "You must agree to the terms to register"
 msgstr "Musíte odsouhlasit podmínky služby pro pokračování v registraci."
 
-#: forms.py:95
+#: forms.py:92
 msgid ""
 "This email address is already in use. Please supply a different email "
 "address."
 msgstr ""
-"Tato e-mailová adresa se již používá. Prosím zadejte jinou e-mailovou "
-"adresu."
+"Tato e-mailová adresa se již používá. Prosím zadejte jinou e-mailovou adresu."
 
-#: forms.py:122
+#: forms.py:119
 msgid ""
 "Registration using free email addresses is prohibited. Please supply a "
 "different email address."
 msgstr ""
-"Používání volných e-mailových adres je zakázáno. Prosím zadejte "
-"jinou e-mailovou adresu."
+"Používání volných e-mailových adres je zakázáno. Prosím zadejte jinou e-"
+"mailovou adresu."
 
-#: models.py:165
+#: models.py:182
 msgid "user"
 msgstr "uživatel"
 
-#: models.py:166
+#: models.py:183
 msgid "activation key"
 msgstr "aktivační klíč"
 
-#: models.py:171
+#: models.py:188
 msgid "registration profile"
 msgstr "registrační profil"
 
-#: models.py:172
+#: models.py:189
 msgid "registration profiles"
 msgstr "registrační profily"
+
+#: templates/activation_email.txt:2
+#, fuzzy
+msgid "Activate account at"
+msgstr "Aktivovat uživatele"
+
+#: templates/activation_email.txt:6
+#, python-format
+msgid "Link is valid for %(expiration_days)s days."
+msgstr ""
+
+#: templates/activation_email_subject.txt:1
+#, fuzzy
+msgid "Account activation on"
+msgstr "aktivační klíč"
+
+#: templates/registration/activate.html:7
+msgid "Account successfully activated"
+msgstr ""
+
+#: templates/registration/activate.html:9 templates/registration/login.html:21
+#: templates/registration/password_reset_complete.html:8
+msgid "Log in"
+msgstr ""
+
+#: templates/registration/activate.html:13
+#, fuzzy
+msgid "Account activation failed"
+msgstr "Znovu odeslat aktivační e-maily"
+
+#: templates/registration/activation_complete.html:5
+msgid "Your account is now activated."
+msgstr ""
+
+#: templates/registration/logout.html:13
+msgid "Logged out"
+msgstr ""
+
+#: templates/registration/password_change_done.html:5
+#, fuzzy
+msgid "Password changed"
+msgstr "Heslo (znovu)"
+
+#: templates/registration/password_change_form.html:17
+#: templates/registration/password_reset_confirm.html:23
+#: templates/registration/password_reset_form.html:20
+msgid "Submit"
+msgstr ""
+
+#: templates/registration/password_reset_complete.html:6
+msgid "Password reset successfully"
+msgstr ""
+
+#: templates/registration/password_reset_confirm.html:31
+msgid "Password reset failed"
+msgstr ""
+
+#: templates/registration/password_reset_done.html:5
+msgid "Email with password reset instructions has been sent."
+msgstr ""
+
+#: templates/registration/password_reset_email.html:2
+#, python-format
+msgid "Reset password at %(site_name)s"
+msgstr ""
+
+#: templates/registration/registration_complete.html:5
+msgid "You are now registered. Activation email sent."
+msgstr ""
+
+#~ msgid "Email address"
+#~ msgstr "E-mailová adresa"

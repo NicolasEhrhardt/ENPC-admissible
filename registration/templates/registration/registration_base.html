@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block menu-sub %}
+  <ul>
+    <li class="{% block conn-link %}{% endblock %}"><a href="{% url "auth_login" %}">Connexion</a></li>
+    <li class="{% block regi-link %}{% endblock %}"><a href="{% url "registration_register" %}">Inscription</a></li>
+    <li class="{% block pass-link %}{% endblock %}"><a href="{% url "auth_password_reset" %}">Mot de passe oublié</a></li>
+  </ul>
+{% endblock %}
+
+{% block title %}
+  Message
+{% endblock %}
+
+{% block content-title %}
+  Message 
+{% endblock %}
+
+{% block reg-section %}current{% endblock %}
+

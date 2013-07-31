@@ -121,9 +121,7 @@ ROOT_URLCONF = 'admissible.urls'
 WSGI_APPLICATION = 'admissible.wsgi.application'
 
 TEMPLATE_DIRS = (
-    os.path.join(os.path.join(SITE_ROOT, 'admissible'), 'templates'),
     os.path.join(os.path.join(os.path.join(SITE_ROOT, 'admissible'), 'templates'), 'fiber'),
-    os.path.join(os.path.join(SITE_ROOT, 'registration'), 'templates'),
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -173,7 +171,13 @@ DAYS_TO_PAY = 10
 
 # Emails
 
-EMAIL_HOST = 'localhost'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'nico.ehrhardt@gmail.com'
+EMAIL_HOST_PASSWORD = '[ouvre-stp-!]886'
+EMAIL_CONTACT = 'bonjour@admissible.enpc.org'
+
 
 # Landing page after login
 

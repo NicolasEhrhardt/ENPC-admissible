@@ -41,7 +41,7 @@ body {
 #container #frame #menu-global-links {
   position: absolute;
   right: 0;
-  top: -60px;
+  top: -25px;
 }
 #container #frame #menu-global-links a {
   line-height: 35px;
@@ -50,21 +50,26 @@ body {
   text-decoration: none;
   font-family: Arial;
   font-variant: small-caps;
-  -webkit-border-radius: 0 0 5px 5px;
-  border-radius: 0 0 5px 5px;
+  -webkit-border-radius: 5px 5px;
+  border-radius: 5px 5px;
   margin-right: 10px;
   padding: 6px 13px;
-  background: #bd987d;
-  -webkit-box-shadow: 1px 1px 3px #1d1d1d;
-  box-shadow: 1px 1px 3px #1d1d1d;
+  background: #fff;
+  -webkit-box-shadow: inset 0px 0px 2px #1d1d1d;
+  box-shadow: inset 0px 0px 2px #1d1d1d;
   position: relative;
-  text-shadow: 0px -1px 0px rgba(0,0,0,0.5);
 }
 #container #frame #menu-global-links a:hover {
-  color: #fff;
-  text-shadow: 0px -1px 2px rgba(0,0,0,0.5);
+  -webkit-box-shadow: inset 0px 0px 4px #1d1d1d;
+  box-shadow: inset 0px 0px 4px #1d1d1d;
+  text-decoration: underline;
 }
-#container #frame #menu-global-links a .arrow-down {
+#container #frame #menu-global-links .current {
+  color: #ba0303;
+  -webkit-box-shadow: inset 0px 0px 2px #1d1d1d;
+  box-shadow: inset 0px 0px 2px #1d1d1d;
+}
+#container #frame #menu-global-links .current .arrow-down {
   width: 0;
   height: 0;
   line-height: 0;
@@ -75,15 +80,15 @@ body {
   position: absolute;
 }
 #container #frame #menu-sub-space {
-  width: 190px;
+  width: 210px;
   float: right;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 #container #frame #menu-sub-space #menu-sub {
-  width: 175px;
+  width: 200px;
   float: right;
   position: fixed;
-  padding: 10px 0 10px 20px;
+  padding: 10px 0 10px 10px;
   border-top: solid 1px #dcdcdc;
   border-bottom: solid 1px #dcdcdc;
 }
@@ -119,21 +124,20 @@ body {
 }
 #container #frame #content-title {
   margin-bottom: 30px;
-  margin-top: 0;
+  margin-top: 10px;
 }
 #container #frame #content-title h1 {
   margin-top: 0;
   font-family: kaushan-script, serif;
   text-indent: 20px;
-  font-size: 4em;
+  font-size: 3.5em;
   font-weight: normal;
 }
 #container #frame #content-view {
-  margin-right: 220px;
+  margin-right: 240px;
   padding-left: 10px;
   padding-top: 10px;
   padding-right: 30px;
-  border-right: 1px solid #dcdcdc;
   padding-bottom: 30px;
 }
 #container #frame #content-view img {
@@ -171,13 +175,13 @@ body {
   float: right;
   -webkit-border-radius: 5px 0 0 0;
   border-radius: 5px 0 0 0;
-  background: #bd987d;
+  background: transparent;
   color: #141414;
   padding: 6px 13px;
   line-height: 25px;
   font-size: 1em;
-  -webkit-box-shadow: 5px 5px 20px #787878;
-  box-shadow: 5px 5px 20px #787878;
+  -webkit-box-shadow: inset 0px 0px 5px #787878;
+  box-shadow: inset 0px 0px 5px #787878;
   position: relative;
 }
 #foot p .arrow-up {
