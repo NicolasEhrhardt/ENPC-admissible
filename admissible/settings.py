@@ -127,17 +127,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-# Fiber
-import django.conf.global_settings as DEFAULT_SETTINGS
-TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
-    'django.core.context_processors.request',
-)
-
-FIBER_DEFAULT_TEMPLATE = 'fiber.html'
-
-FIBER_IMAGES_DIR = 'uploads/images'
-FIBER_FILES_DIR = 'uploads/files'
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -152,6 +141,8 @@ INSTALLED_APPS = (
     'registration',
     'room',
     'booking',
+    # payments
+    'paypal.standard.ipn',
     # dev tool
     'pipeline',
     'south',
@@ -166,7 +157,37 @@ INSTALLED_APPS = (
 )
 
 # Installed App variables
+
+# Fiber
+
+FIBER_DEFAULT_TEMPLATE = 'fiber.html'
+
+FIBER_IMAGES_DIR = 'uploads/images'
+FIBER_FILES_DIR = 'uploads/files'
+
+import django.conf.global_settings as DEFAULT_SETTINGS
+
+TEMPLATE_CONTEXT_PROCESSORS = DEFAULT_SETTINGS.TEMPLATE_CONTEXT_PROCESSORS + (
+    'django.core.context_processors.request',
+)
+
+# Paypals
+
+PAYPAL_TEST = True
+PAYPAL_IMAGE = "https://www.sandbox.paypal.com/fr_FR/i/btn/btn_buynowCC_LG.gif"
+PAYPAL_SANDBOX_IMAGE = "https://www.sandbox.paypal.com/fr_FR/i/btn/btn_buynowCC_LG.gif"
+PAYPAL_RECEIVER_EMAIL = "yourpaypalemail@example.com"
+PAYPAL_AMOUNT = 25.00
+PAYPAL_NOTIFY_URL = ""
+#PAYPAL_RETURN_URL = ""
+#PAYPAL_CANCEL_URL = ""
+
+# Registration
+
 ACCOUNT_ACTIVATION_DAYS = 7
+
+# Booking
+
 DAYS_TO_PAY = 10
 
 # Emails
@@ -178,40 +199,9 @@ EMAIL_HOST_USER = 'nico.ehrhardt@gmail.com'
 EMAIL_HOST_PASSWORD = '[ouvre-stp-!]886'
 EMAIL_CONTACT = 'bonjour@admissible.enpc.org'
 
-
 # Landing page after login
 
 LOGIN_REDIRECT_URL = '/profile/home'
-
-# A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
-# the site admins on every HTTP 500 error when DEBUG=False.
-# See http://docs.djangoproject.com/en/dev/topics/logging for
-# more details on how to customize your logging configuration.
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'filters': {
-        'require_debug_false': {
-            '()': 'django.utils.log.RequireDebugFalse'
-        }
-    },
-    'handlers': {
-        'mail_admins': {
-            'level': 'ERROR',
-            'filters': ['require_debug_false'],
-            'class': 'django.utils.log.AdminEmailHandler'
-        }
-    },
-    'loggers': {
-        'django.request': {
-            'handlers': ['mail_admins'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
-    }
-}
-
 
 # Pipeline
 
@@ -247,3 +237,36 @@ PIPELINE_CSS = {
         },
     },
 }
+
+# A sample logging configuration. The only tangible logging
+# performed by this configuration is to send an email to
+# the site admins on every HTTP 500 error when DEBUG=False.
+# See http://docs.djangoproject.com/en/dev/topics/logging for
+# more details on how to customize your logging configuration.
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django.request': {
+            'handlers': ['mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    }
+}
+
+
+
