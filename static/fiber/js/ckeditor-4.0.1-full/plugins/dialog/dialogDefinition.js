@@ -1,1 +1,4 @@
-/usr/local/lib/python2.7/dist-packages/fiber/static/fiber/js/ckeditor-4.0.1-full/plugins/dialog/dialogDefinition.js
+﻿/*
+ Copyright (c) 2003-2013, CKSource - Frederico Knabben. All rights reserved.
+ For licensing, see LICENSE.html or http://ckeditor.com/license
+*/

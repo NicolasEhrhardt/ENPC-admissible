@@ -1,1 +1,10 @@
-/usr/local/lib/python2.7/dist-packages/fiber/static/fiber/js/ckeditor-4.0.1-full/config.js
+/**
+ * @license Copyright (c) 2003-2012, CKSource - Frederico Knabben. All rights reserved.
+ * For licensing, see LICENSE.html or http://ckeditor.com/license
+ */
+
+CKEDITOR.editorConfig = function( config ) {
+	// Define changes to default configuration here. For example:
+	// config.language = 'fr';
+	// config.uiColor = '#AADC6E';
+};
