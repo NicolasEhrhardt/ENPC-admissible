@@ -1,0 +1,11 @@
+{% extends "booking/booking_status_base.html" %}
+
+{% block content %}
+  <p>
+    La chambre {{ number }} vous a été attribuée.<br/>
+    Il s'agit d'une chambre {{ type }}.<br/>
+    Merci de bien vouloir payer la reservation avant le {{ paymentDue }}.
+
+    {{ form.render }}
+</p>
+{% endblock %}
