@@ -2,11 +2,11 @@ import os
 
 # Django settings for admissible project.
 
-DEBUG = True
+DEBUG = False
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Nicolas Ehrhardt', 'your_email@example.com'),
+    ('Nicolas Ehrhardt', 'admissible@clubinfo.enpc.fr'),
 )
 
 MANAGERS = ADMINS
@@ -16,10 +16,10 @@ SITE_ROOT = os.path.abspath(os.path.join(os.path.dirname( __file__ ), '..'))
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'enpc',                      # Or path to database file if using sqlite3.
-        'USER': 'djangoadmissible',                      # Not used with sqlite3.
-        'PASSWORD': 'QJQRrfmez',                  # Not used with sqlite3.
-        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'NAME': 'enpcadmis',                      # Or path to database file if using sqlite3.
+        'USER': 'enpcadmis',                      # Not used with sqlite3.
+        'PASSWORD': 'o78uT4lp9e',                  # Not used with sqlite3.
+        'HOST': 'mysql51-21.pro',                      # Set to empty string for localhost. Not used with sqlite3.
         'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
@@ -211,11 +211,11 @@ PIPELINE_COMPILERS = (
     'pipeline.compilers.stylus.StylusCompiler',
 )
 
-PIPELINE_STYLUS_BINARY = "/usr/local/bin/stylus -u nib"
+#PIPELINE_STYLUS_BINARY = "/usr/local/bin/stylus -u nib"
 
 STATICFILES_STORAGE = 'pipeline.storage.PipelineStorage'
 
-PIPELINE = True
+#PIPELINE = True
 
 PIPELINE_CSS = {
     'core': {
