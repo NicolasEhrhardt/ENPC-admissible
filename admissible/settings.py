@@ -220,7 +220,7 @@ PIPELINE = True
 PIPELINE_CSS = {
     'core': {
         'source_filenames': (
-            'styl/style.styl',        
+            'css/style.styl',        
         ),
         'output_filename': 'css/style.css',
         'extra_context': {
