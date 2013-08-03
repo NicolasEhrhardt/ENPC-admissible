@@ -222,7 +222,7 @@ PIPELINE_CSS = {
         'source_filenames': (
             'styl/style.styl',        
         ),
-        'output_filename': 'css/new_core.css',
+        'output_filename': 'css/style.css',
         'extra_context': {
             'media': 'screen,projection',
         },
@@ -267,6 +267,3 @@ LOGGING = {
         },
     }
 }
-
-
-
